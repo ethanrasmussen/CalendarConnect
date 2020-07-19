@@ -10,14 +10,28 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+# this is used for the 'Link Calendar!' button
 class ClickableLabel(QtWidgets.QLabel):
-    def __init__(self, parent):
+    def __init__(self, parent, window):
+        self.window = window
         QtWidgets.QLabel.__init__(self, parent)
     def mousePressEvent(self, ev: QtGui.QMouseEvent) -> None:
         print("Click!")
+        # change background
+        self.window.change_background()
+        # print info entered on lines
+        print(self.window.emailLine.text())
+        print(self.window.passwordLine.text())
+        print(self.window.teamupLinkLine.text())
+        # hide lines
+        self.window.emailLine.hide()
+        self.window.passwordLine.hide()
+        self.window.teamupLinkLine.hide()
 
 
 class Ui_MainWindow(object):
+
+    # UI setup
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(813, 635)
@@ -49,7 +63,7 @@ class Ui_MainWindow(object):
         self.backgroundImage.setScaledContents(True)
         self.backgroundImage.setObjectName("backgroundImage")
         # TODO
-        self.linkButtonLabel = ClickableLabel(self.centralwidget)
+        self.linkButtonLabel = ClickableLabel(self.centralwidget, self)
         self.linkButtonLabel.setGeometry(QtCore.QRect(260, 510, 281, 61))
         self.linkButtonLabel.setText("")
         self.linkButtonLabel.setObjectName("linkButtonLabel")
@@ -619,10 +633,14 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
+    # name window to 'Discord CalendarConnect'
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Discord CalendarConnect"))
 
+    # change background image
+    def change_background(self):
+        self.backgroundImage.setPixmap(QtGui.QPixmap("art\\cc_icon.png"))
 
 if __name__ == "__main__":
     import sys
