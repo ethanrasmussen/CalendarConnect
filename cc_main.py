@@ -94,3 +94,17 @@ def status_updates(calendar:str, email:str, password:str):
     cal = TeamupCalendar(calendar)
     events = cal.get_events()
     update = DiscordStatusUpdater(events, email, password)
+
+
+# link teamup calendar to status updates on Discord
+def link_teamup_calendar(email:str, password:str, teamup_link:str):
+    # add today's events to status update queue
+    cal = TeamupCalendar(teamup_link)
+    events = cal.get_events()
+    update = DiscordStatusUpdater(events, email, password)
+    update.daily_schedule_update()
+    # update status based on calendar (will start next day)
+    schedule.every().day.at('00:00').do(status_updates, calendar=teamup_link, email=email, password=password)
+    while True:
+        schedule.run_pending()
+        time.sleep(1)
