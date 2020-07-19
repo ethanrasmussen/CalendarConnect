@@ -1,7 +1,7 @@
-# CalendarConnect
+# ![CalendarConnect Icon](https://github.com/ethanrasmussen/CalendarConnect/blob/master/art/cc_icon.png) CalendarConnect
 This program links your Discord status to your calendar!
 
-### Main Limitations (Currently):
+### Main Limitations (With the current Teamup version):
 - Cannot use "All-Day" events within Teamup
 - Cannot detect different Teamup sub-calendars
 - Local time (on PC) must match timezone of Teamup calendar
