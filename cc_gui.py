@@ -10,6 +10,12 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+class ClickableLabel(QtWidgets.QLabel):
+    def __init__(self, parent):
+        QtWidgets.QLabel.__init__(self, parent)
+    def mousePressEvent(self, ev: QtGui.QMouseEvent) -> None:
+        print("Click!")
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -42,7 +48,8 @@ class Ui_MainWindow(object):
         self.backgroundImage.setPixmap(QtGui.QPixmap("art\\cc_main.PNG"))
         self.backgroundImage.setScaledContents(True)
         self.backgroundImage.setObjectName("backgroundImage")
-        self.linkButtonLabel = QtWidgets.QLabel(self.centralwidget)
+        # TODO
+        self.linkButtonLabel = ClickableLabel(self.centralwidget)
         self.linkButtonLabel.setGeometry(QtCore.QRect(260, 510, 281, 61))
         self.linkButtonLabel.setText("")
         self.linkButtonLabel.setObjectName("linkButtonLabel")
