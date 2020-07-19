@@ -8,11 +8,11 @@ Make sure you have a Teamup calendar set with events! It could look something li
 
 ![](https://github.com/ethanrasmussen/CalendarConnect/blob/master/art/cc_demo_4.PNG)
 #### Step 2:
-Clone this repo.
+Clone this repo, and install the required [dependencies](https://github.com/ethanrasmussen/CalendarConnect/blob/master/README.md#dependencies) via pip.
 #### Step 3:
 Run [run.pyw](https://github.com/ethanrasmussen/CalendarConnect/blob/master/run.pyw) (for no terminal/cmd line) or [cc_gui.py](https://github.com/ethanrasmussen/CalendarConnect/blob/master/cc_gui.py).
 #### Step 4:
-Enter your login details for Discord, and the link to your Teamup calendar (don't worry, this data isn't stored anywhere! feel free to take a look for yourself!).
+Enter your login details for Discord and the link to your Teamup calendar (don't worry, this data isn't stored anywhere! feel free to take a look in the code for yourself!).
 
 ![](https://github.com/ethanrasmussen/CalendarConnect/blob/master/art/cc_demo_1.PNG)
 #### Step 5:
@@ -46,3 +46,8 @@ And your Discord status should update according to your calendar!
 - [Discord Logo](https://www.iconfinder.com/icons/4373196/discord_logo_logos_icon) by [Flatart](https://www.freepik.com/flatart)
 - [Calendar Icon](https://www.iconfinder.com/icons/285670/calendar_icon) by Paomedia / [CC BY](https://creativecommons.org/licenses/by/3.0/)
 - [Wumpus Art](https://www.deviantart.com/inklessrambles/art/Wumpus-797089963) by [inklessrambles](https://www.deviantart.com/inklessrambles)
+
+### Dependencies:
+- [PyQT5](https://pypi.org/project/PyQt5/) == 5.15.0
+- [requests](https://pypi.org/project/requests/) == 2.24.0
+- [schedule](https://pypi.org/project/schedule/) == 0.6.0
