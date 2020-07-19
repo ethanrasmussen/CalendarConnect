@@ -1,5 +1,5 @@
 # ![](https://github.com/ethanrasmussen/CalendarConnect/blob/master/art/cc_icon_small.png) CalendarConnect
-This program links your Discord status to your calendar! After seeing a [post on Reddit](https://www.reddit.com/r/discordapp/comments/hs0d6l/its_always_bugged_me_that_you_cant_schedule/), I was inspired to find a way to utilize Discord's custom status feature in conjunction with one's schedule. So... I made this! CalendarConnect currently only supports [Teamup](https://www.teamup.com/) calendars (an underrated favorite of mine), but I'm hoping to add more support for other popular calendars like Google Calendar & Outlook Calendar in the future.
+This program links your Discord status to your calendar! After seeing a [post on Reddit](https://www.reddit.com/r/discordapp/comments/hs0d6l/its_always_bugged_me_that_you_cant_schedule/), I was inspired to find a way to utilize Discord's custom status feature in conjunction with one's schedule. So... I made this! It ended up being a fun project, and a great way to start learning PyQT5! CalendarConnect currently only supports [Teamup](https://www.teamup.com/) calendars (an underrated favorite of mine), but I'm hoping to add support for other popular calendars like Google Calendar & Outlook Calendar in the future.
 
 ### Usage:
 
