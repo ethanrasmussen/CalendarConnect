@@ -108,6 +108,3 @@ def link_teamup_calendar(email:str, password:str, teamup_link:str):
     while True:
         schedule.run_pending()
         time.sleep(1)
-
-def printtest():
-    print("Works!")

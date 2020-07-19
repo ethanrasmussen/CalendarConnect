@@ -29,7 +29,6 @@ class ClickableLabel(QtWidgets.QLabel):
             self.window.passwordLine.hide()
             self.window.teamupLinkLine.hide()
             # link calendar!
-            cc.printtest()
             thread = threading.Thread(target=cc.link_teamup_calendar, args=(self.window.emailLine.text(), self.window.passwordLine.text(), self.window.teamupLinkLine.text()))
             thread.start()
             # cc.link_teamup_calendar(self.window.emailLine.text(), self.window.passwordLine.text(), self.window.teamupLinkLine.text())
