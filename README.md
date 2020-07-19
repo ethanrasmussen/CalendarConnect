@@ -1,4 +1,4 @@
-# ![CalendarConnect Icon](https://github.com/ethanrasmussen/CalendarConnect/blob/master/art/cc_icon.png =200x200) CalendarConnect
+# ![CalendarConnect Icon](https://github.com/ethanrasmussen/CalendarConnect/blob/master/art/cc_icon.png =200x) CalendarConnect
 This program links your Discord status to your calendar!
 
 ### Main Limitations (With the current Teamup version):
