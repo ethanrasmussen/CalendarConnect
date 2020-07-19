@@ -16,17 +16,21 @@ class ClickableLabel(QtWidgets.QLabel):
         self.window = window
         QtWidgets.QLabel.__init__(self, parent)
     def mousePressEvent(self, ev: QtGui.QMouseEvent) -> None:
-        print("Click!")
-        # change background
-        self.window.change_background()
+        # if all lines are filled out, link Discord & calendar
+        if self.window.emailLine.text() != "" and self.window.passwordLine.text() != "" and self.window.teamupLinkLine.text() != "":
+            # switch to background indicating linked
+            self.window.background_linked()
+            # hide lines
+            self.window.emailLine.hide()
+            self.window.passwordLine.hide()
+            self.window.teamupLinkLine.hide()
+        else:
+            print("Missing information!")
         # print info entered on lines
         print(self.window.emailLine.text())
         print(self.window.passwordLine.text())
         print(self.window.teamupLinkLine.text())
-        # hide lines
-        self.window.emailLine.hide()
-        self.window.passwordLine.hide()
-        self.window.teamupLinkLine.hide()
+
 
 
 class Ui_MainWindow(object):
@@ -639,10 +643,9 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "Discord CalendarConnect"))
 
     # change background image after calendar is linked
-    def change_background(self):
+    def background_linked(self):
         self.backgroundImage.setPixmap(QtGui.QPixmap("art\\cc_running.PNG"))
 
-    # TODO: error
 
 if __name__ == "__main__":
     import sys
