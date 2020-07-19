@@ -10,7 +10,7 @@ Make sure you have a Teamup calendar set with events! It could look something li
 #### Step 2:
 Clone this repo.
 #### Step 3:
-Run [cc_gui.py](https://github.com/ethanrasmussen/CalendarConnect/blob/master/cc_gui.py).
+Run [run.pyw](https://github.com/ethanrasmussen/CalendarConnect/blob/master/run.pyw) (for no terminal/cmd line) or [cc_gui.py](https://github.com/ethanrasmussen/CalendarConnect/blob/master/cc_gui.py).
 #### Step 4:
 Enter your login details for Discord, and the link to your Teamup calendar (don't worry, this data isn't stored anywhere! feel free to take a look for yourself!).
 
