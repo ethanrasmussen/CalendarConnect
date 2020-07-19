@@ -9,6 +9,8 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+import cc_main as cc
+import threading
 
 # this is used for the 'Link Calendar!' button
 class ClickableLabel(QtWidgets.QLabel):
@@ -24,6 +26,11 @@ class ClickableLabel(QtWidgets.QLabel):
             self.window.emailLine.hide()
             self.window.passwordLine.hide()
             self.window.teamupLinkLine.hide()
+            # link calendar!
+            cc.printtest()
+            thread = threading.Thread(target=cc.link_teamup_calendar, args=(self.window.emailLine.text(), self.window.passwordLine.text(), self.window.teamupLinkLine.text()))
+            thread.start()
+            # cc.link_teamup_calendar(self.window.emailLine.text(), self.window.passwordLine.text(), self.window.teamupLinkLine.text())
         else:
             print("Missing information!")
         # print info entered on lines
@@ -637,6 +644,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
+
     # name window to 'Discord CalendarConnect'
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -646,11 +654,20 @@ class Ui_MainWindow(object):
     def background_linked(self):
         self.backgroundImage.setPixmap(QtGui.QPixmap("art\\cc_running.PNG"))
 
+    # custom close event
+    def closeEvent(self, event):
+        print("closed!")
+
+def closeEvent():
+    print("closed!!")
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
+    # disable 'X' button
+    MainWindow.setWindowFlag(QtCore.Qt.WindowCloseButtonHint, False)
+    #
     ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
     MainWindow.show()
