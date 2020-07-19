@@ -12,6 +12,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import cc_main as cc
 import threading
 
+thread = threading.Thread()
+
 # this is used for the 'Link Calendar!' button
 class ClickableLabel(QtWidgets.QLabel):
     def __init__(self, parent, window):
@@ -663,6 +665,7 @@ class Ui_MainWindow(object):
 
 
 def exitProgram():
+    thread.join()
     exit()
 
 if __name__ == "__main__":
