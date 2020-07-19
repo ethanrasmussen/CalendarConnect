@@ -632,6 +632,12 @@ class Ui_MainWindow(object):
         self.teamupLinkLine.setAutoFillBackground(True)
         self.teamupLinkLine.setFrame(False)
         self.teamupLinkLine.setObjectName("teamupLinkLine")
+        # TODO
+        self.exitButton = QtWidgets.QPushButton(self.centralwidget)
+        self.exitButton.setGeometry(QtCore.QRect(780, 7, 21, 21))
+        self.exitButton.setObjectName("exitButton")
+        self.exitButton.clicked.connect(exitProgram)
+        #
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 813, 24))
@@ -649,17 +655,15 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Discord CalendarConnect"))
+        self.exitButton.setText(_translate("MainWindow", "X"))
 
     # change background image after calendar is linked
     def background_linked(self):
         self.backgroundImage.setPixmap(QtGui.QPixmap("art\\cc_running.PNG"))
 
-    # custom close event
-    def closeEvent(self, event):
-        print("closed!")
 
-def closeEvent():
-    print("closed!!")
+def exitProgram():
+    exit()
 
 if __name__ == "__main__":
     import sys
