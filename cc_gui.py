@@ -638,9 +638,11 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Discord CalendarConnect"))
 
-    # change background image
+    # change background image after calendar is linked
     def change_background(self):
-        self.backgroundImage.setPixmap(QtGui.QPixmap("art\\cc_icon.png"))
+        self.backgroundImage.setPixmap(QtGui.QPixmap("art\\cc_running.PNG"))
+
+    # TODO: error
 
 if __name__ == "__main__":
     import sys
