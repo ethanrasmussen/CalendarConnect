@@ -5,6 +5,7 @@ This program links your Discord status to your calendar! After seeing a [post on
 Currently, you'll need to clone this repo to use the program. I'm working on creating an executable, but unfortunately Pyinstaller has been giving me a bit of trouble due to the included image files. So, for now, here's what you'll need to do to run the program:
 #### Step 1:
 Make sure you have a Teamup calendar set with events! It could look something like this:
+
 ![](https://github.com/ethanrasmussen/CalendarConnect/blob/master/art/cc_demo_4.PNG)
 #### Step 2:
 Clone this repo.
@@ -12,11 +13,15 @@ Clone this repo.
 Run [cc_gui.py](https://github.com/ethanrasmussen/CalendarConnect/blob/master/cc_gui.py).
 #### Step 4:
 Enter your login details for Discord, and the link to your Teamup calendar (don't worry, this data isn't stored anywhere! feel free to take a look for yourself!).
+
 ![](https://github.com/ethanrasmussen/CalendarConnect/blob/master/art/cc_demo_1.PNG)
 #### Step 5:
 Boom! You're linked! You'll now see this dialogue:
+
 ![](https://github.com/ethanrasmussen/CalendarConnect/blob/master/art/cc_demo_2.PNG)
+
 And your Discord status should update according to your calendar!
+
 ![](https://github.com/ethanrasmussen/CalendarConnect/blob/master/art/cc_demo_3.PNG)
 
 ### Main Limitations (With the current Teamup version):
