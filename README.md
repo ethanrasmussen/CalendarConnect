@@ -23,6 +23,9 @@ Boom! You're linked! You'll now see this dialogue:
 And your Discord status should update according to your calendar!
 
 ![](https://github.com/ethanrasmussen/CalendarConnect/blob/master/art/cc_demo_3.PNG)
+#### Hope you enjoy!!
+
+
 
 ### Main Limitations (With the current Teamup version):
 - Cannot use "All-Day" events within Teamup
