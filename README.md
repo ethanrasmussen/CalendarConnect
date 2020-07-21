@@ -34,6 +34,7 @@ And your Discord status should update according to your calendar!
 - Cannot handle concurrent events
 
 ### TODO List (Not in any particular order):
+- Rewrite to utilize RPC vs. custom status
 - Create an executable version of the program
 - Error/exception handling, for when a user mis-enters their information, or Discord and/or Teamup are offline
 - Ability to minimize window to tray
