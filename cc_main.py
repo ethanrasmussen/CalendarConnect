@@ -6,7 +6,7 @@ import discord_rich_presence as drpc
 
 
 # NOTICE: The 'schedule' module uses the machine's local time. Therefore, you should ensure that this matches the timezone of your calendar.
-client_id = "735164013658374277"
+client_id = ""
 
 
 class StatusEvent:
